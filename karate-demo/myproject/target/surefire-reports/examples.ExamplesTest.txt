@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: examples.ExamplesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.603 s <<< FAILURE! - in examples.ExamplesTest
+testParallel  Time elapsed: 0.598 s  <<< ERROR!
+java.lang.RuntimeException: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+	at examples.ExamplesTest.testParallel(ExamplesTest.java:14)
+

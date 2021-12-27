@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="res/karate-report.css" type="text/css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <script type="text/javascript" src="res/jquery.min.js"></script>
+  <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="res/bootstrap.min.js"></script>
+  <script type="text/javascript" src="res/karate-report.js"></script>
+  <title>examples.users.JSONSchemaValidate</title>
+</head>
+
+<body>
+  <div id="root-container">
+    <div id="leftnav">
+
+      <div>
+        <div class="nav-logo">
+          <a href="karate-summary.html">
+            <img src="karate-logo.svg" alt="Karate" />
+          </a>
+          <div class="nav-count">
+            <div id="nav-pass" class="bg-success">0</div>
+            <div id="nav-fail" class="bg-danger">1</div>
+          </div>
+        </div>
+        <div id="nav-type">
+          <div>Scenarios</div>
+        </div>
+        <div id="nav-date">
+          <div>2021-08-30 08:51:06 PM</div>
+        </div>
+      </div>
+
+      <div class="nav-container">
+        <div class="nav-item failed">
+          <a href="#[1:3]"><span>[1:3]</span> <span>Validate with the Third Party</span></a>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div class="page-heading alert alert-primary">
+        <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+        <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+        <span class="feature-label">Feature:</span>
+        <span class="feature-path">examples/users/JSONSchemaValidate.feature</span><span class="feature-label">|</span>
+        <span class="feature-name">JSON Schema Validation</span>
+        <span class="feature-description"></span>
+      </div>
+      <div class="scenario">
+        <div class="scenario-heading" id="[1:3]">
+          <div class="heading-container">
+            <div class="scenario-tags">
+
+            </div>
+            <div class="scenario-keyword">
+              Scenario: <span>[1:3]</span>
+              <span class="scenario-name">Validate with the Third Party</span>
+              <span></span>
+            </div>
+          </div>
+          <div class="scenario-time failed">
+            <span>ms:</span>&nbsp;<span>67</span>
+          </div>
+        </div>
+
+        <div>
+          <div>
+
+
+
+
+            <div class="step-row">
+              <div class="step-container" id="0.4">
+                <div class="step-ref passed">4</div>
+
+                <div class="step-cell passed">
+                  <span>*</span>&nbsp;<span>def jsonSchemaExpected =</span>
+                </div>
+              </div>
+              <div class="time-cell passed">1</div>
+            </div>
+
+
+
+            <div class="preformatted" data-parent="0.4">{
+              &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema&quot;,
+              &quot;$id&quot;: &quot;http://example.com/example.json&quot;,
+              &quot;type&quot;: &quot;object&quot;,
+              &quot;title&quot;: &quot;The root schema&quot;,
+              &quot;description&quot;: &quot;The root schema comprises the entire JSON document.&quot;,
+              &quot;default&quot;: {},
+              &quot;examples&quot;: [
+              {
+              &quot;id&quot;: 1,
+              &quot;name&quot;: &quot;pramod&quot;
+              }
+              ],
+              &quot;required&quot;: [
+              &quot;id&quot;,
+              &quot;name&quot;
+              ],
+              &quot;properties&quot;: {
+              &quot;id&quot;: {
+              &quot;$id&quot;: &quot;#/properties/id&quot;,
+              &quot;type&quot;: &quot;integer&quot;,
+              &quot;title&quot;: &quot;The id schema&quot;,
+              &quot;description&quot;: &quot;An explanation about the purpose of this instance.&quot;,
+              &quot;default&quot;: 0,
+              &quot;examples&quot;: [
+              1
+              ]
+              },
+              &quot;name&quot;: {
+              &quot;$id&quot;: &quot;#/properties/name&quot;,
+              &quot;type&quot;: &quot;string&quot;,
+              &quot;title&quot;: &quot;The name schema&quot;,
+              &quot;description&quot;: &quot;An explanation about the purpose of this instance.&quot;,
+              &quot;default&quot;: &quot;&quot;,
+              &quot;examples&quot;: [
+              &quot;pramod&quot;
+              ]
+              }
+              },
+              &quot;additionalProperties&quot;: true
+              }</div>
+
+
+
+            <div class="preformatted" data-parent="0.4">20:51:05.717 karate.env system property was: null
+            </div>
+
+
+
+          </div>
+        </div>
+        <div>
+          <div>
+
+
+
+
+            <div class="step-row">
+              <div class="step-container" id="0.48">
+                <div class="step-ref passed">48</div>
+
+                <div class="step-cell passed">
+                  <span>*</span>&nbsp;<span>def jsonDataActual =</span>
+                </div>
+              </div>
+              <div class="time-cell passed">0</div>
+            </div>
+
+
+
+            <div class="preformatted" data-parent="0.48">{
+              &quot;id&quot;: 1,
+              &quot;name&quot;: &quot;pramod&quot;
+              }</div>
+
+
+
+
+
+
+
+          </div>
+        </div>
+        <div>
+          <div>
+
+
+
+
+            <div class="step-row">
+              <div class="step-container" id="0.55">
+                <div class="step-ref failed">55</div>
+
+                <div class="step-cell failed">
+                  <span>*</span>&nbsp;<span>def SchemaUtils =
+                    Java.type(&#39;com.intuit.karate.demo.util.SchemaUtils&#39;)</span>
+                </div>
+              </div>
+              <div class="time-cell failed">66</div>
+            </div>
+
+
+
+
+
+
+
+            <div class="preformatted" data-parent="0.55">20:51:05.787
+              classpath:examples/users/JSONSchemaValidate.feature:55
+              * def SchemaUtils = Java.type(&#39;com.intuit.karate.demo.util.SchemaUtils&#39;)
+              js failed:
+              &gt;&gt;&gt;&gt;
+              01: Java.type(&#39;com.intuit.karate.demo.util.SchemaUtils&#39;)
+              &lt;&lt;&lt;&lt;
+              org.graalvm.polyglot.PolyglotException: TypeError: Access to host class
+              com.intuit.karate.demo.util.SchemaUtils is not allowed or does not exist.
+              - &lt;js&gt;.:program(Unnamed:1)
+
+              classpath:examples/users/JSONSchemaValidate.feature:55
+            </div>
+
+
+
+          </div>
+        </div>
+        <div>
+          <div>
+
+
+
+
+            <div class="step-row">
+              <div class="step-container" id="0.56">
+                <div class="step-ref skipped">56</div>
+
+                <div class="step-cell skipped">
+                  <span>*</span>&nbsp;<span>assert SchemaUtils.isValid(jsonDataActual, jsonSchemaExpected)</span>
+                </div>
+              </div>
+              <div class="time-cell skipped">0</div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
